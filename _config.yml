@@ -1,0 +1,6 @@
+title: Qubrid AI
+description: GPU inference platform for running open-source LLMs, vision, and speech models via APIs or playground.
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag
