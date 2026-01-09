@@ -1,0 +1,26 @@
+# NutriVision AI - Production Dependencies
+
+# Core Framework
+streamlit==1.29.0
+
+# Image Processing
+Pillow==10.1.0
+
+# HTTP Client
+requests==2.31.0
+
+# Environment Management
+python-dotenv==1.0.0
+
+# LangChain Integration (NEW)
+langchain==0.1.0
+langchain-openai==0.0.2
+langchain-core==0.1.10
+
+# Structured Output (NEW)
+pydantic==2.5.0
+pydantic-core==2.14.0
+
+# Optional: For enhanced features
+# plotly==5.18.0  # For charts (if you want to add them back)
+# pandas==2.1.4   # For data processing
