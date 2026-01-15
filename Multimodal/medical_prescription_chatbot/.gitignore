@@ -1,0 +1,22 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+**/.DS_Store
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Database
+*.db
+
+uv.lock
+.env
+.python-version
