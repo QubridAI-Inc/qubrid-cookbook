@@ -1,0 +1,6 @@
+streamlit
+pydantic
+requests
+python-dotenv
+Pillow
+fpdf

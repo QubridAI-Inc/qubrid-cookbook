@@ -1,0 +1,20 @@
+# Security
+.env
+
+# Environments: Keep these local
+venv/
+env/
+
+# Database: Keep local history local
+*.db
+*.sqlite3
+
+# Test Assets: Ignore uploaded images
+frontend/assets/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Mac system files
+.DS_Store
