@@ -228,8 +228,8 @@ Comprehensive language coverage including:
 
 ## 🔗 Official Resources
 
--   **Qubrid Official Cookbooks**: [Explore on GitHub](https://github.com/QubridAI-Inc/qubrid-cookbook)
--   **Qubrid YouTube Channel**: [Watch Tutorials](https://www.youtube.com/watch?v=1LX-w2Sgvts&list=PLoaE-lmLecgPoYuSa2BsmlJ8isKB5KFtq)
+-   **Qubrid Official Cookbooks**: [Explore `ready-to-use` recipes on Github.](https://github.com/QubridAI-Inc/qubrid-cookbook)
+-   **Qubrid Official YouTube Channel**: [Watch Tutorials](https://www.youtube.com/watch?v=1LX-w2Sgvts&list=PLoaE-lmLecgPoYuSa2BsmlJ8isKB5KFtq)
 
 ---
 
