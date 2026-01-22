@@ -1,0 +1,14 @@
+[project]
+name = "translate-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.2.6",
+    "pillow>=12.1.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "streamlit>=1.53.0",
+    "agno>=2.0.0",
+]
