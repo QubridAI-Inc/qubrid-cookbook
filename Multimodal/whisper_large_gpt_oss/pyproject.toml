@@ -1,0 +1,14 @@
+[project]
+name = "audio-intel"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.35.0",
+    "langgraph>=0.1.0",
+    "openai>=1.0.0",
+    "plotly>=6.5.2",
+    "pandas>=2.0.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "yt-dlp>=2024.1.0",
+]

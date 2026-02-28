@@ -1,0 +1,22 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+
+# Local Data & History
+data/
+*.db
+*.sqlite3
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
