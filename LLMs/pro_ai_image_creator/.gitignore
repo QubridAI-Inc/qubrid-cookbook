@@ -1,0 +1,7 @@
+.env
+__pycache__/
+data/
+generated_images/
+.streamlit/
+assets.db
+.venv/

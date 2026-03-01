@@ -1,0 +1,15 @@
+[project]
+name = "advanced-ai-image-creation"
+version = "1.0.0"
+description = "A premium, glass-morphism AI Image Generation Studio powered by Qubrid AI and Stable Diffusion 3.5."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-core>=1.2.12",
+    "langgraph>=1.0.8",
+    "openai>=2.20.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "streamlit>=1.54.0",
+    "watchdog>=4.0.0",
+]
