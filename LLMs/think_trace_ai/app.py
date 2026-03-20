@@ -13,7 +13,7 @@ from frontend.components import (
     render_footer,
     render_history_sidebar
 )
-from backend.api_client import solve_problem
+from backend.api_client import stream_problem
 
 
 from backend.parser import clean_reasoning, clean_answer
@@ -73,49 +73,63 @@ with center_col:
             st.session_state["answer"] = None
             st.session_state["reasoning"] = None
 
-            with st.spinner("Kimi K2 is loading its reasoning engine..."):
-                # Call API
-                res = solve_problem(st.session_state["current_question"], "")
-                
-            if "error" in res:
-                st.error(res["error"])
-            else:
-                # Store text results, extracting cleanly
-                raw_reasoning = res.get("reasoning", "")
-                raw_answer = res.get("answer", "")
-                
-                cleaned_reasoning = clean_reasoning(raw_reasoning)
-                cleaned_answer = clean_answer(raw_answer)
-                
-                # Update session state metrics
-                tokens = res.get("tokens_used", 0)
-                lat_sec = res.get("latency_ms", 0) / 1000.0  # ms to seconds
-                
-                st.session_state["answer"] = cleaned_answer
-                st.session_state["reasoning"] = cleaned_reasoning
-                st.session_state["tokens_used"] = tokens
-                st.session_state["latency"] = lat_sec
-                st.session_state["show_reasoning"] = True
-                
-                # Update aggregate stats
-                st.session_state["question_count"] += 1
-                st.session_state["total_tokens"] += tokens
-                
-                # History stat for longest trace tracking
-                st.session_state["history_stats"].append({
-                    "reason_len": len(cleaned_reasoning),
-                    "latency": lat_sec
-                })
-                
-                # Persist to SQLite History
-                save_session(
-                    question=st.session_state["current_question"],
-                    category="",
-                    reasoning=cleaned_reasoning,
-                    answer=cleaned_answer,
-                    tokens=tokens,
-                    latency=lat_sec
-                )
+            reasoning_buf = ""
+            answer_buf = ""
+
+            st.markdown("#### 🔍 Thinking Process")
+            reasoning_box = st.empty()
+            st.markdown("#### ✅ Final Answer")
+            answer_box = st.empty()
+
+            error_occurred = None
+
+            for chunk_type, chunk_data in stream_problem(st.session_state["current_question"]):
+                if chunk_type == "error":
+                    error_occurred = chunk_data
+                    break
+                elif chunk_type == "reasoning":
+                    reasoning_buf += chunk_data
+                    reasoning_box.markdown(
+                        f'<div style="background:#f5f0e8;border-left:3px solid #8B7355;'
+                        f'padding:12px 16px;border-radius:6px;font-size:0.88rem;'
+                        f'color:#4a4a4a;white-space:pre-wrap;max-height:400px;overflow-y:auto;">'
+                        f'{reasoning_buf}</div>',
+                        unsafe_allow_html=True
+                    )
+                elif chunk_type == "answer":
+                    answer_buf += chunk_data
+                    answer_box.markdown(answer_buf)
+                elif chunk_type == "done":
+                    tokens = chunk_data.get("tokens_used", 0)
+                    lat_sec = chunk_data.get("latency_ms", 0) / 1000.0
+
+                    cleaned_reasoning = clean_reasoning(reasoning_buf)
+                    cleaned_answer = clean_answer(answer_buf)
+
+                    st.session_state["answer"] = cleaned_answer
+                    st.session_state["reasoning"] = cleaned_reasoning
+                    st.session_state["tokens_used"] = tokens
+                    st.session_state["latency"] = lat_sec
+                    st.session_state["show_reasoning"] = True
+                    st.session_state["question_count"] += 1
+                    st.session_state["total_tokens"] += tokens
+                    st.session_state["history_stats"].append({
+                        "reason_len": len(cleaned_reasoning),
+                        "latency": lat_sec
+                    })
+
+                    save_session(
+                        question=st.session_state["current_question"],
+                        category="",
+                        reasoning=cleaned_reasoning,
+                        answer=cleaned_answer,
+                        tokens=tokens,
+                        latency=lat_sec
+                    )
+                    st.rerun()
+
+            if error_occurred:
+                st.error(error_occurred)
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 
