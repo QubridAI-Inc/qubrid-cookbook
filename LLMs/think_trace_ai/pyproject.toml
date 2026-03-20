@@ -1,0 +1,11 @@
+[project]
+name = "thinktrace-ai"
+version = "0.1.0"
+description = "Watch AI Think. — Powered by Qubrid AI × Kimi K2 Thinking"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "streamlit>=1.40.0",
+]
