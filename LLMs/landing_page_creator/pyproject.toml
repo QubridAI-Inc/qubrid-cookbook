@@ -1,0 +1,13 @@
+[project]
+name = "snapcode-ai"
+version = "0.1.0"
+description = "See it. Code it. — Powered by Qubrid AI × Kimi K2.5"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.40.0",
+    "requests>=2.31.0",
+    "pillow>=10.0.0",
+    "python-dotenv>=1.0.0",
+    "openai>=2.29.0",
+]
