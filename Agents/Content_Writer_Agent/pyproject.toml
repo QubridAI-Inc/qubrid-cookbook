@@ -1,0 +1,15 @@
+[project]
+name = "tonecraft-ai"
+version = "0.1.0"
+description = "Style-Aware Content Rewriter powered by GLM-4.7 × Qubrid AI"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.40.0",
+    "openai>=1.30.0",
+    "python-dotenv>=1.0.0",
+    "langgraph>=0.2.0",
+    "langchain-core>=0.3.0",
+]
+
+[tool.uv]
+dev-dependencies = []
