@@ -1,0 +1,21 @@
+[project]
+name = "revive-ai"
+version = "0.1.0"
+description = "6-Agent Photo Restoration powered by CrewAI × Qubrid AI"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.40.0",
+    "crewai>=0.80.0",
+    "openai>=1.50.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "Pillow>=10.0.0",
+    "opencv-python-headless>=4.8.0",
+    "numpy>=1.24.0",
+]
+
+[dependency-groups]
+dev = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["crew", "backend", "database", "frontend", "config"]

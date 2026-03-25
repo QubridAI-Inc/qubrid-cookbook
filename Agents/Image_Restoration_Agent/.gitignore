@@ -1,0 +1,29 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+.Python
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Outputs (processed images — large, ephemeral)
+outputs/
+
+# Database (local state)
+database/*.db
+
+# Generated sample images
+assets/samples/_generated
+assets/samples/sample_*.jpg
+assets/samples/sample_*.jpeg
+assets/samples/sample_*.png
+assets/samples/sample_*.webp
