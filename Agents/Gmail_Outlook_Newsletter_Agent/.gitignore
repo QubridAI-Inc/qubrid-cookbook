@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+database/*.db
+outputs/*.html
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.composio_cache/
+.uv-cache/
+uv.lock
