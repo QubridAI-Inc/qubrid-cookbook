@@ -5,6 +5,7 @@
   <a href="https://qubrid.com/">🔗 Website</a> •
   <a href="https://docs.platform.qubrid.com/">📖 Docs</a> •
   <a href="https://platform.qubrid.com/playground">🧪 Playground</a> •
+  <a href="https://platform.qubrid.com/api-keys">🗝️ Get Model API Key </a> •
   <a href="https://platform.qubrid.com/">🚀 Platform</a> •
   <a href="https://www.qubrid.com/blog-news">📚 Blog</a>
 </p>
@@ -97,6 +98,7 @@ We welcome contributions from the community! To add your cookbook or improve exi
 - [🚀 Qubrid Platform](https://platform.qubrid.com/) - Access your dashboard and projects
 - [📖 Documentation](https://docs.platform.qubrid.com/) - Complete API and platform docs
 - [🧪 Playground](https://platform.qubrid.com/playground) - Test models interactively
+- [🗝️ Model API](https://platform.qubrid.com/api-keys) - Get Model API Key
 - [📚 Blog](https://www.qubrid.com/blog-news) - Latest updates and technical articles
 
 ### Community & Learning
