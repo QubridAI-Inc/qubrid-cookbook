@@ -14,12 +14,12 @@ from dotenv import load_dotenv
 # Load .env before anything that reads env vars
 load_dotenv()
 
-from config.settings import OUTPUTS_DIR, APP_NAME
-from database import db
-from backend import image_processor as ip
-from crew import pipeline as pipe
-from frontend import components as ui
-from frontend.styles import get_css
+from Deprecated.Image_Restoration_Agent.config.settings import OUTPUTS_DIR, APP_NAME
+from Deprecated.Image_Restoration_Agent.database import db
+from Deprecated.Image_Restoration_Agent.backend import image_processor as ip
+from Deprecated.Image_Restoration_Agent.crew import pipeline as pipe
+from Deprecated.Image_Restoration_Agent.frontend import components as ui
+from Deprecated.Image_Restoration_Agent.frontend.styles import get_css
 
 # ── Page config ───────────────────────────────────────────────────────────────
 from PIL import Image as _PILImage
@@ -43,7 +43,7 @@ os.makedirs("assets/samples", exist_ok=True)
 # Generate sample images if missing
 _samples_script = os.path.join("assets", "samples", "_generated")
 if not os.path.exists(_samples_script):
-    from frontend.assets.generate_samples import generate_all
+    from Deprecated.Image_Restoration_Agent.frontend.assets.generate_samples import generate_all
     generate_all()
     open(_samples_script, "w").close()
 

@@ -1,5 +1,5 @@
 import streamlit as st
-from backend.database import get_history, delete_by_id
+from Deprecated.whisper_large_gpt_oss.backend.database import get_history, delete_by_id
 
 def render_sidebar_col():
     is_open = st.session_state.get("sidebar_open", True)

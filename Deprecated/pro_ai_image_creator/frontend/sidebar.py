@@ -1,5 +1,5 @@
 import streamlit as st
-from database.db import get_sessions, delete_session
+from Deprecated.pro_ai_image_creator.database.db import get_sessions, delete_session
 
 def render_sidebar():
     with st.sidebar:

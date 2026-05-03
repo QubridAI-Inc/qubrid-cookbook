@@ -17,7 +17,7 @@ try:
 except ImportError:
     CREWAI_TOOLS_AVAILABLE = False
 
-from backend import image_processor as ip
+from Deprecated.Image_Restoration_Agent.backend import image_processor as ip
 
 
 # ── Input schemas ─────────────────────────────────────────────────────────────

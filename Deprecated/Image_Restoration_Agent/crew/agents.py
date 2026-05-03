@@ -13,7 +13,7 @@ from typing import Any
 
 from crewai import Agent
 
-from config.settings import (
+from Deprecated.Image_Restoration_Agent.config.settings import (
     VISION_MODEL,
     REASONING_MODEL,
     QUBRID_BASE_URL,
@@ -83,7 +83,7 @@ class QubridReasoningLLM:
 
 def build_agents() -> dict[str, Agent]:
     """Construct and return all 6 ReVive AI agents."""
-    from crew.tools import (
+    from Deprecated.Image_Restoration_Agent.crew.tools import (
         DenoiseImageTool,
         ContrastEnhanceTool,
         SharpenImageTool,

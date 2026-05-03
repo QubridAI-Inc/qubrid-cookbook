@@ -12,7 +12,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageEnhance
 
-from config.settings import OUTPUTS_DIR, MAX_FILE_SIZE_MB, SUPPORTED_FORMATS
+from Deprecated.Image_Restoration_Agent.config.settings import OUTPUTS_DIR, MAX_FILE_SIZE_MB, SUPPORTED_FORMATS
 
 
 # ── Loading & encoding ────────────────────────────────────────────────────────

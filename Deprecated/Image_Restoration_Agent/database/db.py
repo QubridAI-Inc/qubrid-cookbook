@@ -10,7 +10,7 @@ import sqlite3
 from contextlib import contextmanager
 from typing import Any, Generator
 
-from config.settings import DB_PATH
+from Deprecated.Image_Restoration_Agent.config.settings import DB_PATH
 
 
 # ── Connection helper ─────────────────────────────────────────────────────────

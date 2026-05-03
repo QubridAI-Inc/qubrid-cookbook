@@ -1,7 +1,7 @@
 import streamlit as st
-from frontend.components import render_hero, render_uploader, render_results
-from frontend.sidebar import render_sidebar_col
-from backend.database import get_by_id
+from Deprecated.whisper_large_gpt_oss.frontend.components import render_hero, render_uploader, render_results
+from Deprecated.whisper_large_gpt_oss.frontend.sidebar import render_sidebar_col
+from Deprecated.whisper_large_gpt_oss.backend.database import get_by_id
 import base64
 
 def render_footer():

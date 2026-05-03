@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, END
-from backend.state import AgentState
-from backend.nodes import generate_asset_node
+from Deprecated.pro_ai_image_creator.backend.state import AgentState
+from Deprecated.pro_ai_image_creator.backend.nodes import generate_asset_node
 
 def build_graph():
     workflow = StateGraph(AgentState)

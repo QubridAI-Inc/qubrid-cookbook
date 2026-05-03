@@ -1,7 +1,7 @@
 import sqlite3
 import json
 from datetime import datetime
-from config.settings import config
+from Deprecated.whisper_large_gpt_oss.config.settings import config
 
 def _conn():
     return sqlite3.connect(config.DB_PATH)

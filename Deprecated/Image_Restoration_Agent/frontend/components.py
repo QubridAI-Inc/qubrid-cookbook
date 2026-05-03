@@ -16,11 +16,11 @@ import numpy as np
 import streamlit as st
 import streamlit.components.v1 as components
 
-from config.settings import (
+from Deprecated.Image_Restoration_Agent.config.settings import (
     APP_NAME, APP_TAGLINE, APP_SUB_TAGLINE, BRAND_LINE,
     SUPPORTED_FORMATS, AGENT_NAMES,
 )
-from frontend.styles import COLORS
+from Deprecated.Image_Restoration_Agent.frontend.styles import COLORS
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -837,7 +837,7 @@ def render_sidebar_history(
                 unsafe_allow_html=True,
             )
             if st.button("🗑", key=f"hist_del_{job_id}", use_container_width=True, help="Delete"):
-                from database import db as _db
+                from Deprecated.Image_Restoration_Agent.database import db as _db
                 _db.delete_job(job_id)
                 st.rerun()
 
@@ -851,7 +851,7 @@ def render_sidebar_history(
         c1, c2 = st.columns(2)
         with c1:
             if st.button("Yes, clear all", width="stretch"):
-                from database import db
+                from Deprecated.Image_Restoration_Agent.database import db
                 db.clear_all_jobs()
                 st.session_state["confirm_clear"] = False
                 st.rerun()

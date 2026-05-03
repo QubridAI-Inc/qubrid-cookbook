@@ -2,8 +2,8 @@ import os
 import json
 import requests
 from openai import OpenAI
-from backend.state import AgentState
-from config.settings import config
+from Deprecated.whisper_large_gpt_oss.backend.state import AgentState
+from Deprecated.whisper_large_gpt_oss.config.settings import config
 
 def _llm(prompt: str) -> str:
     """Single reusable LLM call via OpenAI-compatible client."""

@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, END
-from backend.state import AgentState
-from backend.nodes import (
+from Deprecated.whisper_large_gpt_oss.backend.state import AgentState
+from Deprecated.whisper_large_gpt_oss.backend.nodes import (
     transcribe_node,
     format_segments_node,
     generate_chapters_node,

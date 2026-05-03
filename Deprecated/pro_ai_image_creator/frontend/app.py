@@ -7,11 +7,11 @@ import base64
 # Path setup for project modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from database.db import init_db, create_session, get_history, get_sessions
-from frontend.sidebar import render_sidebar
-from frontend.styles import get_css
-from backend.graph import build_graph
-from config.settings import API_KEY, GENERATED_IMAGES_DIR
+from Deprecated.pro_ai_image_creator.database.db import init_db, create_session, get_history, get_sessions
+from Deprecated.pro_ai_image_creator.frontend.sidebar import render_sidebar
+from Deprecated.pro_ai_image_creator.frontend.styles import get_css
+from Deprecated.pro_ai_image_creator.backend.graph import build_graph
+from Deprecated.pro_ai_image_creator.config.settings import API_KEY, GENERATED_IMAGES_DIR
 from PIL import Image
 
 # --- INITIALIZATION ---

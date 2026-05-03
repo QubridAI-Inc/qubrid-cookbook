@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from config.settings import config
+from Deprecated.whisper_large_gpt_oss.config.settings import config
 
 st.set_page_config(
     page_title="Audio Snap AI",
@@ -11,9 +11,9 @@ st.set_page_config(
 
 config.setup_directories()
 
-from backend.database import init_db
-from frontend.styles import load_css
-from frontend.views import render_main_view
+from Deprecated.whisper_large_gpt_oss.backend.database import init_db
+from Deprecated.whisper_large_gpt_oss.frontend.styles import load_css
+from Deprecated.whisper_large_gpt_oss.frontend.views import render_main_view
 
 def main():
     init_db()

@@ -11,7 +11,7 @@ from typing import Any
 
 from openai import OpenAI
 
-from config.settings import (
+from Deprecated.Image_Restoration_Agent.config.settings import (
     QUBRID_BASE_URL,
     REASONING_MODEL,
     MAX_TOKENS_REASONING,

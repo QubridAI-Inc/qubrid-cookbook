@@ -2,9 +2,9 @@ import requests
 import os
 import uuid
 import random
-from config.settings import API_KEY, GENERATION_URL, MODEL_ID, GENERATED_IMAGES_DIR
-from backend.state import AgentState
-from database.db import add_message
+from Deprecated.pro_ai_image_creator.config.settings import API_KEY, GENERATION_URL, MODEL_ID, GENERATED_IMAGES_DIR
+from Deprecated.pro_ai_image_creator.backend.state import AgentState
+from Deprecated.pro_ai_image_creator.database.db import add_message
 
 def generate_asset_node(state: AgentState) -> AgentState:
     try:

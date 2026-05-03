@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import os
 import re as _re
-from config.settings import config
-from backend.graph import app_graph
-from backend.database import save_result
+from Deprecated.whisper_large_gpt_oss.config.settings import config
+from Deprecated.whisper_large_gpt_oss.backend.graph import app_graph
+from Deprecated.whisper_large_gpt_oss.backend.database import save_result
 
 
 def render_hero():

@@ -13,8 +13,9 @@ import time
 from typing import Any, Callable
 
 
-from backend import qwen_client, nemotron_client, image_processor as ip
-from config.settings import (
+from Deprecated.Image_Restoration_Agent.backend import image_processor as ip, nemotron_client
+from Deprecated.Image_Restoration_Agent.backend import qwen_client
+from Deprecated.Image_Restoration_Agent.config.settings import (
     HISTORIAN_PROMPT,
     ANALYST_PROMPT,
     STRATEGIST_PROMPT,
