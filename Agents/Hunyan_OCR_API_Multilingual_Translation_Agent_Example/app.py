@@ -22,6 +22,9 @@ st.set_page_config(
     layout="wide"
 )
 
+# Security: Maximum file size limit (10MB)
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB in bytes
+
 
 def encode_image(uploaded_file) -> str:
     """Convert uploaded file to base64 data URI."""
@@ -47,6 +50,11 @@ def main():
     
     # Translation workflow
     if uploaded_file and translate_button:
+        # Security: Validate file size before processing
+        if uploaded_file.size > MAX_FILE_SIZE:
+            st.error(f"❌ File size exceeds {MAX_FILE_SIZE // (1024 * 1024)}MB limit. Please upload a smaller image.")
+            return
+        
         with st.spinner("Processing..."):
             try:
                 # Step 1: Encode image
